@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    active: development
+  hateoas:
+    use-hal-as-default-json-media-type: true
+  application:
+    name: hyperxpress
+  config:
+    import: optional:configserver:http://localhost:8888/
+  cloud:
+    config:
+      profile: development
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - '*'
